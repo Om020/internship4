@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Magazine Cover</title>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: 'Roboto', sans-serif;
+            background-color: #f4f4f4;
+        }
+
+        .magazine-cover {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto;
+            background-color: #fff;
+            overflow: hidden;
+        }
+
+        .featured-image {
+            width: 100%;
+            height: 500px;
+            background-image: url('https://via.placeholder.com/1200x500'); /* Replace with your image */
+            background-size: cover;
+            background-position: center;
+        }
+
+        .title-text {
+            position: absolute;
+            top: 20%;
+            left: 10%;
+            color: black;
+            font-family: 'Playfair Display', serif;
+            font-size: 3rem;
+            background: red;
+            padding: 10px 20px;
+            border-radius: 8px;
+        }
+        .title-text:hover{
+            background-color: aqua;
+            
+        }
+
+        .headlines {
+            padding: 20px;
+        }
+
+        .headline {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+            position: relative;
+        }
+
+        .headline::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -5px;
+            width: 50px;
+            height: 3px;
+            background-color: #ff6347;
+        }
+
+        .caption {
+            font-size: 1rem;
+            color: #666;
+            margin-bottom: 20px;
+        }
+
+        .decorative-element {
+            width: 100%;
+            height: 5px;
+            background: linear-gradient(to right, #ff6347, #ffd700);
+            margin: 20px 0;
+        }
+
+        .decorative-circle {
+            position: absolute;
+            top: 10%;
+            right: 10%;
+            width: 100px;
+            height: 100px;
+            background-color: rgba(255, 99, 71, 0.7);
+            border-radius: 50%;
+            z-index: 10;
+        }
+
+        .decorative-lines {
+            position: absolute;
+            bottom: 10%;
+            left: 10%;
+            width: 150px;
+            height: 5px;
+            background-color: #ffd700;
+        }
+
+        .decorative-lines::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 5px;
+            background-color: #ff6347;
+            top: 10px;
+            left: 20px;
+        }
+
+        .decorative-stars {
+            position: absolute;
+            top: 5%;
+            left: 5%;
+            font-size: 3rem;
+            color: rgba(255, 215, 0, 0.8);
+            z-index: 15;
+        }
+
+        .decorative-box {
+            position: absolute;
+            bottom: 15%;
+            right: 5%;
+            width: 200px;
+            height: 100px;
+            background: black;
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Playfair Display', serif;
+            font-size: 1.2rem;
+            border-radius: 10px;
+        }
+        .decorative-box:hover{
+            color:black;
+            background: red;
+        }
+        .subscribe-btn {
+            display: block;
+            width: 200px;
+            margin: 20px auto;
+            padding: 10px 20px;
+            text-align: center;
+            background-color: #ff6347;
+            color: #fff;
+            font-size: 1.2rem;
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            
+        }
+
+        .subscribe-btn:hover {
+            background-color: black;
+        }
+
+        @media (max-width: 768px) {
+            .title-text {
+                font-size: 2rem;
+            }
+
+            .headline {
+                font-size: 1.2rem;
+            }
+
+            .caption {
+                font-size: 0.9rem;
+            }
+
+            .decorative-box {
+                width: 150px;
+                height: 80px;
+                font-size: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="magazine-cover">
+        <div class="featured-image"></div>
+        <h1 class="title-text">The Organic Lifestyle</h1>
+
+        <div class="decorative-circle"></div>
+
+        <div class="decorative-stars">&#9733; &#9733; &#9733;</div>
+
+        <div class="headlines">
+            <div class="headline">Top 10 Tips for Healthy Living</div>
+            <div class="caption">Discover simple ways to improve your lifestyle with organic choices.</div>
+
+            <div class="headline">Exclusive Interview with Wellness Experts</div>
+            <div class="caption">Insights on staying fit and embracing natural products.</div>
+
+            <div class="headline">Eco-Friendly Trends of 2023</div>
+            <div class="caption">How sustainable practices are shaping the world.</div>
+        </div>
+
+        <div class="decorative-element"></div>
+
+        <div class="decorative-lines"></div>
+
+        <div class="decorative-box">Special Edition</div>
+
+        <a href="#" class="subscribe-btn">Subscribe Now</a>
+    </div>
+</body>
+</html>
